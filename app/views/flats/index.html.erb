@@ -1,0 +1,8 @@
+<h1> All our flats (<%=@flats.count%>)</h1>
+<ul> <% @flats.each do |flat|%>
+  <li>
+    <%= link_to flat.name, flat_path(flat) %>
+  </li>
+  </ul>
+  <% end %>
+  <%= link_to 'New Flat', new_flat_path %>
