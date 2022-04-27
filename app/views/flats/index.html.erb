@@ -3,6 +3,15 @@
   <li>
     <%= link_to flat.name, flat_path(flat) %>
   </li>
+  <li>
+    <%= link_to flat.address, flat_path(flat) %>
+  </li>
+  <li>
+    <%= link_to flat.price_per_night, flat_path(flat) %>
+  </li>
+  <li>
+    <%= link_to flat.description, flat_path(flat) %>
+  </li>
   </ul>
   <% end %>
   <%= link_to 'New Flat', new_flat_path %>
