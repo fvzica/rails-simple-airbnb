@@ -11,6 +11,7 @@
                           </div>
                           <div class="card-footer">
                             <small class="text-muted"><%= link_to "Edit", edit_flat_path(flat)%></small>
+                            <small class="text-muted"><%= link_to "Destroy", flat_path(flat), method: :delete, data: {confirm: "Are you sure? "} %></small>
                           </div>
                         </div>
                       </div>
