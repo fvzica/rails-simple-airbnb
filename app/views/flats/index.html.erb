@@ -1,57 +1,20 @@
-<h1> All our flats (<%=@flats.count%>)</h1>
-<ul> <% @flats.each do |flat|%>
-  <li>
-    <%= link_to flat.name, flat_path(flat) %>
-  </li>
-  <li>
-    <%= link_to flat.address, flat_path(flat) %>
-  </li>
-  <li>
-    <%= link_to flat.price_per_night, flat_path(flat) %>
-  </li>
-  <li>
-    <%= link_to flat.description, flat_path(flat) %>
-  </li>
-  </ul>
-  <% end %>
-  <%= link_to 'New Flat', new_flat_path %>
   <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
+                    <h1> All our flats (<%=@flats.count%>)</h1>
+                    <ul> <% @flats.each do |flat|%>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                      <div class="col">
+                        <div class="card h-100">
+                          <img src="..." class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title"><%= link_to flat.name, flat_path(flat) %></h5>
+                            <p class="card-text">   <%= link_to flat.address, flat_path(flat) %></p>
+                          </div>
+                          <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  <% end %>
+  </div>
+<%= link_to 'New Flat', new_flat_path %>
